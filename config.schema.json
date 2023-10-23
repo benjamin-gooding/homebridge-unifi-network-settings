@@ -1,0 +1,44 @@
+{
+    "pluginAlias": "UniFiNetworkSettings",
+    "pluginType": "platform",
+    "singular": true,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "controllers": {
+                "type": "object",
+                "title": "UniFi Network Controller",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "title": "Network Address",
+                        "required": true,
+                        "format": "hostname",
+                        "placeholder": "e.g. 1.2.3.4",
+                        "description": "Hostname or IP address of your UniFi Network controller."
+                    },
+                    "credentials": {
+                        "type": "object",
+                        "title": "Credentials",
+                        "properties": {
+                            "password": {
+                                "type": "string",
+                                "title": "Password",
+                                "required": true,
+                                "placeholder": "e.g. unifi-network-password",
+                                "description": "Creating a homebridge-specific local user is strongly encouraged for security and sanity."
+                            },
+                            "username": {
+                                "type": "string",
+                                "title": "Username",
+                                "required": true,
+                                "placeholder": "e.g. some-unifi-network-user",
+                                "description": "Creating a homebridge-specific local user is strongly encouraged for security and sanity."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
